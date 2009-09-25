@@ -28,6 +28,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires:  ant >= 1.6.5
 BuildRequires:  java-devel >= 0:1.6.0
 BuildRequires:  jpackage-utils
+BuildRequires:  java-rpmbuild >= 0:1.5.32
 
 Requires:       java >= 0:1.6.0
 Requires:       jpackage-utils
