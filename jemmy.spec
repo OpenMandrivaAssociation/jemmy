@@ -8,7 +8,7 @@
 
 Name:           jemmy
 Version:        2.3.0.0
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Java UI testing library
 
 Group:          Development/Java
