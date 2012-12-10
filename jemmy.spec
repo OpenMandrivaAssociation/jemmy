@@ -8,7 +8,7 @@
 
 Name:           jemmy
 Version:        2.3.0.0
-Release:        %mkrel 2
+Release:        3
 Summary:        Java UI testing library
 
 Group:          Development/Java
@@ -23,7 +23,6 @@ URL:            https://jemmy.dev.java.net
 #
 # where <username> is a name of the user registered here: https://www.dev.java.net/servlets/Join
 Source0:        jemmy-2.3.0.0.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  ant >= 1.6.5
 BuildRequires:  java-devel >= 0:1.6.0
@@ -71,10 +70,7 @@ echo "Please, visit https://jemmy.dev.java.net for more info about Jemmy." > REA
 
 # javadoc
 %__mkdir_p %{buildroot}%{_javadocdir}/%{name}
-%__cp -a %{target_javadoc} %{buildroot}%{_javadocdir}/%{name}
-
-%clean
-%__rm -rf %{buildroot}
+cp -pr %{target_javadoc}/* %{buildroot}%{_javadocdir}/%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -84,4 +80,16 @@ echo "Please, visit https://jemmy.dev.java.net for more info about Jemmy." > REA
 %files javadoc
 %defattr(-,root,root,-)
 %{_javadocdir}/%{name}
+
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 2.3.0.0-2mdv2011.0
++ Revision: 619796
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 25 2009 Jaroslav Tulach <jtulach@mandriva.org> 2.3.0.0-1mdv2010.0
++ Revision: 448735
+- First Mandriva package for jemmy (originally part of NetBeans, now separated)
+- create jemmy
 
