@@ -8,7 +8,7 @@
 
 Name:           jemmy
 Version:        2.3.0.0
-Release:        3
+Release:        4
 Summary:        Java UI testing library
 
 Group:          Development/Java
